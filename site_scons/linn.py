@@ -23,17 +23,17 @@ from SCons.Action import *
 #
 def generateLinnFS(target=None, source=None, env=None):
 
-    os.system("srv/filesystem/linn/host/create boot/boot.linn" \
+    os.system("srv/filesystem/linn/host/create boot/eng/boot.linn" \
 	      " -d . -s -n 16384 -e '*.cpp' -e '*.h' -e '*.c' -e '*.o' -e 'lib*' -e 'doc' " \
 	      " -e 'SCons*' -e '*.a' -e '*.S' -e '*.ld' -e 'boot*'")
-    os.system("gzip -f boot/boot.linn")
+    os.system("gzip -f boot/eng/boot.linn")
 
 #
 # Prints out a user friendly command-line string.
 #
 def generateLinnFSStr(target, source, env):
 
-    return "  LINN    boot/boot.linn.gz"
+    return "  LINN    boot/eng/boot.linn.gz"
 
 #
 # Create LinnFS Action.

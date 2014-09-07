@@ -49,7 +49,7 @@ target.Append(BUILDERS = { 'Img' : imgBuilder })
 #
 # Define dependencies and targets.
 #
-img = target.Img('boot/boot.img', ['boot/boot.imgdesc'])
-target.Clean(img, '#boot/boot.img.gz')
+img = target.Img('boot/eng/boot.img', ['boot/eng/boot.imgdesc'])
+target.Clean(img, '#boot/eng/boot.img.gz')
 Depends(img, ['bin', 'lib', 'kernel', 'sbin', 'srv'])
 AlwaysBuild(img)

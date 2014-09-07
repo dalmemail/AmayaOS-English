@@ -1,0 +1,20 @@
+color	cyan/red white/blue
+timeout 10
+
+title AMAYA OS 0.06 (Spanish)
+root (cd)
+kernel /kernel/kernel
+module /boot/boot.img.gz
+module /boot/boot.linn.gz
+
+title AMAYA OS 0.06 (English)
+root (cd)
+kernel /kernel/eng/kernel
+module /boot/eng/boot.img.gz
+module /boot/eng/boot.linn.gz
+
+title AMAYA OS 0.06 (Français)
+
+title	Start from main drive / hard disk
+rootnoverify (hd0)
+chainloader +1
